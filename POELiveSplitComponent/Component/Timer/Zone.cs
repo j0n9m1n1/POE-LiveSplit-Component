@@ -34,6 +34,7 @@ namespace POELiveSplitComponent.Component.Timer
             add(new Zone("바위 턱", 1), IconType.Wp);
             add(new Zone("고개", 1), IconType.Wp);
             add(new Zone("수용소 하층", 1), IconType.Wp);
+            add(new Zone("물결 섬", 1), IconType.NoWp);
             add(new Zone("수용소 상층", 1), IconType.NoWp);
             add(new Zone("죄수의 문", 1), IconType.Wp);
             add(new Zone("배들의 묘지", 1), IconType.Wp);

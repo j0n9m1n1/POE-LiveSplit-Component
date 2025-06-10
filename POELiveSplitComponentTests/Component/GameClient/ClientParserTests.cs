@@ -120,27 +120,27 @@ namespace POELiveSplitComponentTests.Component.GameClient
         [TestMethod()]
         public void ProcessEnterZoneEnd()
         {
-            ExpectedLoadEnd expected = new ExpectedLoadEnd(177482140, "The Twilight Strand");
+            ExpectedLoadEnd expected = new ExpectedLoadEnd(177482140, "황혼의 해안");
             ClientParser parser = new ClientParser(expected);
-            parser.ProcessLine("2019/03/15 19:47:27 177482140 a50 [INFO Client 784] : You have entered The Twilight Strand.");
+            parser.ProcessLine("2023/12/17 03:47:23 177482140 cff94598 [INFO Client 24000] : 황혼의 해안에 진입했습니다.");
             expected.AssertEventProcessed();
         }
 
         [TestMethod()]
         public void ProcessLevelUp()
         {
-            ExpectedLevelUp expected = new ExpectedLevelUp(177561171, 25);
+            ExpectedLevelUp expected = new ExpectedLevelUp(177561171, 97);
             ClientParser parser = new ClientParser(expected);
-            parser.ProcessLine("2019/03/15 19:48:46 177561171 a50 [INFO Client 784] : Nerf (Shadow) is now level 25");
+            parser.ProcessLine("2023/12/16 16:04:54 177561171 cff94598 [INFO Client 1764] : zizizizizz(패스파인더) 님이 97레벨이 되었습니다.");
             expected.AssertEventProcessed();
         }
 
         [TestMethod()]
         public void ProcessIzaroDialogue()
         {
-            ExpectedIzaroDialogue expected = new ExpectedIzaroDialogue(911705671, "Delight in your gilded dungeon, ascendant.");
+            ExpectedIzaroDialogue expected = new ExpectedIzaroDialogue(32090968, "빛나는 던전에서 기뻐하라, 어센던트.");
             ClientParser parser = new ClientParser(expected);
-            parser.ProcessLine("2020/02/05 23:51:54 911705671 ac9 [INFO Client 10980] Izaro: Delight in your gilded dungeon, ascendant.");
+            parser.ProcessLine("2024/01/14 04:23:39 32090968 cff94598 [INFO Client 8548] 이자로: 빛나는 던전에서 기뻐하라, 어센던트.");
             expected.AssertEventProcessed();
         }
     }

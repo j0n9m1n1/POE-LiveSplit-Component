@@ -33,13 +33,13 @@ namespace POELiveSplitComponentTests.Component.Settings
             XmlDocument xml = new XmlDocument();
             xml.LoadXml(
 @"<AutoSplitterSettings>
-   <log.location>C:/Program Files (x86)/Grinding Gear Games/Path of Exile/logs/client.txt</log.location>
+   <log.location>C:/Daum Games/Path of Exile/logs/KakaoClient.txt</log.location>
    <load.removal>True</load.removal>
    <auto.split>True</auto.split>
    <split.labyrinth>False</split.labyrinth>
    <split.zones.on>
-      <split.zone>Lioneye's Watch (Part 1)</split.zone>
-      <split.zone>Oriath Docks (Part 2)</split.zone>
+      <split.zone>라이온아이 초소 (Part 1)</split.zone>
+      <split.zone>오리아스 부두 (Part 2)</split.zone>
    </split.zones.on>
 </AutoSplitterSettings>");
             XmlNode nodeSettings = xml.FirstChild;
@@ -53,7 +53,7 @@ namespace POELiveSplitComponentTests.Component.Settings
             Assert.AreEqual(2, settings.SplitZones.Count);
             Assert.AreEqual(0, settings.SplitZoneLevels.Count);
             Assert.AreEqual(0, settings.SplitLevels.Count);
-            Assert.AreEqual("C:/Program Files (x86)/Grinding Gear Games/Path of Exile/logs/client.txt", settings.LogLocation);
+            Assert.AreEqual("C:/Daum Games/Path of Exile/logs/KakaoClient.txt", settings.LogLocation);
         }
 
         [TestMethod()]
@@ -62,15 +62,15 @@ namespace POELiveSplitComponentTests.Component.Settings
             XmlDocument xml = new XmlDocument();
             xml.LoadXml(
 @"<AutoSplitterSettings>
-   <log.location>C:\Program Files (x86)\Grinding Gear Games\Path of Exile\logs\Client.txt</log.location>
+   <log.location>C:/Daum Games/Path of Exile/logs/KakaoClient.txt</log.location>
    <load.removal>False</load.removal>
    <auto.split>True</auto.split>
    <split.labyrinth>False</split.labyrinth>
    <split.criteria>Levels</split.criteria>
    <split.zones.on>
-      <split.zone>Lioneye's Watch (Part 1)</split.zone>
-      <split.zone>The Mud Flats (Part 1)</split.zone>
-      <split.zone>The Ledge (Part 1)</split.zone>
+      <split.zone>라이온아이 초소 (Part 1)</split.zone>
+      <split.zone>갯벌 (Part 1)</split.zone>
+      <split.zone>바위 턱 (Part 1)</split.zone>
       <split.level>70</split.level>
    </split.zones.on>
    <split.levels.on>
@@ -87,7 +87,7 @@ namespace POELiveSplitComponentTests.Component.Settings
             Assert.AreEqual(3, settings.SplitZones.Count);
             Assert.IsTrue(new HashSet<int> { 70 }.SetEquals(settings.SplitZoneLevels));
             Assert.IsTrue(new HashSet<int> { 3 }.SetEquals(settings.SplitLevels));
-            Assert.AreEqual(@"C:\Program Files (x86)\Grinding Gear Games\Path of Exile\logs\Client.txt", settings.LogLocation);
+            Assert.AreEqual(@"C:/Daum Games/Path of Exile/logs/KakaoClient.txt", settings.LogLocation);
         }
 
         [TestMethod()]
@@ -96,15 +96,15 @@ namespace POELiveSplitComponentTests.Component.Settings
             XmlDocument xml = new XmlDocument();
             xml.LoadXml(
 @"<AutoSplitterSettings>
-   <log.location>C:\Program Files (x86)\Grinding Gear Games\Path of Exile\logs\Client.txt</log.location>
+   <log.location>C:/Daum Games/Path of Exile/logs/KakaoClient.txt</log.location>
    <load.removal>False</load.removal>
    <auto.split>True</auto.split>
    <split.labyrinth>True</split.labyrinth>
    <split.criteria>Levels</split.criteria>
    <split.zones.on>
-      <split.zone>Lioneye's Watch (Part 1)</split.zone>
-      <split.zone>The Mud Flats (Part 1)</split.zone>
-      <split.zone>The Ledge (Part 1)</split.zone>
+      <split.zone>라이온아이 초소 (Part 1)</split.zone>
+      <split.zone>갯벌 (Part 1)</split.zone>
+      <split.zone>바위 턱 (Part 1)</split.zone>
    </split.zones.on>
    <split.levels.on>
       <split.level>3</split.level>
@@ -120,7 +120,7 @@ namespace POELiveSplitComponentTests.Component.Settings
             Assert.AreEqual(3, settings.SplitZones.Count);
             Assert.AreEqual(0, settings.SplitZoneLevels.Count);
             Assert.AreEqual(1, settings.SplitLevels.Count);
-            Assert.AreEqual(@"C:\Program Files (x86)\Grinding Gear Games\Path of Exile\logs\Client.txt", settings.LogLocation);
+            Assert.AreEqual(@"C:/Daum Games/Path of Exile/logs/KakaoClient.txt", settings.LogLocation);
         }
 
         [TestMethod()]
