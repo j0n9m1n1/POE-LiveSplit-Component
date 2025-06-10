@@ -1,3 +1,6 @@
+# ty
+https://github.com/luensys/POE-LiveSplit-Component
+
 # POE LiveSplit Component
 Load screen time removal and auto splitting for Path of Exile speedrunning.
 
