@@ -1,4 +1,5 @@
 # ty
+카루이의 바닷가 수정
 https://github.com/luensys/POE-LiveSplit-Component
 
 # POE LiveSplit Component
