@@ -25,7 +25,7 @@ namespace POELiveSplitComponent.Component.Settings
         private const string GENERATE_WITH_ICONS = "generate.with.icons";
         private const string LEGACY_SPLIT_LABYRINTH = "split.labyrinth";
 
-        private const string DEFAULT_LOG_LOCATION = @"C:\Program Files (x86)\Grinding Gear Games\Path of Exile\logs\Client.txt";
+        private const string DEFAULT_LOG_LOCATION = @"C:\Daum Games\Path of Exile\logs\KakaoClient.txt";
 
         private string logLocation;
 
