@@ -10,8 +10,8 @@ namespace POELiveSplitComponent.Component.Timer
     public class LoadRemoverSplitter : IClientEventHandler
     {
         // Zone that lab runners must enter before the lab. Unique zone name.
-        private static IZone LAB_ENTRANCE = Zone.Parse("Aspirants' Plaza", new HashSet<IZone>());
-        private static IZone ASPIRANTS_TRIAL = Zone.Parse("Aspirant's Trial", new HashSet<IZone>());
+        private static IZone LAB_ENTRANCE = Zone.Parse("지망자의 광장", new HashSet<IZone>());
+        private static IZone ASPIRANTS_TRIAL = Zone.Parse("지망자의 시험", new HashSet<IZone>());
         private ComponentSettings settings;
         private ITimerModel timer;
         private long loadTimes = 0;
@@ -23,12 +23,12 @@ namespace POELiveSplitComponent.Component.Timer
 
         readonly List<string> IzaroDeathLines = new List<string>()
         {
-            "I die for the Empire!",
-            "You are free!",
-            "Your destination is more dangerous than the journey, ascendant.",
-            "Triumphant at last!",
-            "The trap of tyranny is inescapable.",
-            "Delight in your gilded dungeon, ascendant.",
+            "나는 제국을 위하여 죽노라!", //"I die for the Empire!", // IzaroDeath3
+            "너는 자유로다!", //"You are free!", // IzaroDeath2
+            "너의 여정은 여행처럼 편안하지는 않을 것이다, 어센던트.", //"Your destination is more dangerous than the journey, ascendant.", // IzaroDeath6
+            "마침내 성공하였구나!", // "Triumphant at last!", // IzaroDeath1
+            "폭정의 덫은 피할 수가 없도다.", // "The trap of tyranny is inescapable.", // IzaroDeath4
+            "빛나는 던전에서 기뻐하라, 어센던트.",//"Delight in your gilded dungeon, ascendant.", // IzaroDeath5 
         };
 
         public LoadRemoverSplitter(ITimerModel timer, ComponentSettings settings)
